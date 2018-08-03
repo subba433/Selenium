@@ -1,0 +1,12 @@
+<settings>
+   <proxies>
+   <proxy>
+      <id>proxy</id>
+      <active>true</active>
+      <protocol>http</protocol>
+      <host>81.22.170.82</host>
+      <port>8085</port>
+      <nonProxyHosts>*.cgi.fi</nonProxyHosts>
+    </proxy>
+  </proxies>
+</settings>

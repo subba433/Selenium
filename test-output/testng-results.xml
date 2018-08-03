@@ -1,0 +1,138 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testng-results skipped="0" failed="0" total="1" passed="1">
+  <reporter-output>
+    <line>
+      <![CDATA[About to begin executing BasePage.beforeSuite]]>
+    </line>
+    <line>
+      <![CDATA[Completed executing BasePage.beforeSuite]]>
+    </line>
+    <line>
+      <![CDATA[About to begin executing test RegressionSuite]]>
+    </line>
+    <line>
+      <![CDATA[About to begin executing SampleTest.beforeClass]]>
+    </line>
+    <line>
+      <![CDATA[Completed executing SampleTest.beforeClass]]>
+    </line>
+    <line>
+      <![CDATA[About to begin executing SampleTest.beforeMethod]]>
+    </line>
+    <line>
+      <![CDATA[Completed executing SampleTest.beforeMethod]]>
+    </line>
+    <line>
+      <![CDATA[About to begin executing SampleTest.VerifyFaceBookSignup]]>
+    </line>
+    <line>
+      <![CDATA[Completed executing SampleTest.VerifyFaceBookSignup]]>
+    </line>
+    <line>
+      <![CDATA[TestName = null]]>
+    </line>
+    <line>
+      <![CDATA[Test Method resides in com.flex.testCases.SampleTest]]>
+    </line>
+    <line>
+      <![CDATA[Test Status: Pass]]>
+    </line>
+    <line>
+      <![CDATA[About to begin executing SampleTest.afterMethod]]>
+    </line>
+    <line>
+      <![CDATA[Completed executing SampleTest.afterMethod]]>
+    </line>
+    <line>
+      <![CDATA[About to begin executing SampleTest.afterClass]]>
+    </line>
+    <line>
+      <![CDATA[Completed executing SampleTest.afterClass]]>
+    </line>
+    <line>
+      <![CDATA[Completed executing test RegressionSuite]]>
+    </line>
+    <line>
+      <![CDATA[About to begin executing BasePage.afterSuite]]>
+    </line>
+    <line>
+      <![CDATA[Completed executing BasePage.afterSuite]]>
+    </line>
+  </reporter-output>
+  <suite name="FlexSuite" duration-ms="24513" started-at="2018-08-02T05:56:33Z" finished-at="2018-08-02T05:56:58Z">
+    <groups>
+    </groups>
+    <test name="RegressionSuite" duration-ms="24513" started-at="2018-08-02T05:56:33Z" finished-at="2018-08-02T05:56:58Z">
+      <class name="com.flex.testCases.SampleTest">
+        <test-method status="PASS" signature="beforeSuite()[pri:0, instance:com.flex.testCases.SampleTest@2d928643]" name="beforeSuite" is-config="true" duration-ms="272" started-at="2018-08-02T11:26:33Z" finished-at="2018-08-02T11:26:33Z">
+          <reporter-output>
+            <line>
+              <![CDATA[Completed executing BasePage.beforeSuite]]>
+            </line>
+          </reporter-output>
+        </test-method> <!-- beforeSuite -->
+        <test-method status="PASS" signature="beforeClass()[pri:0, instance:com.flex.testCases.SampleTest@2d928643]" name="beforeClass" is-config="true" duration-ms="5" started-at="2018-08-02T11:26:33Z" finished-at="2018-08-02T11:26:33Z">
+          <reporter-output>
+            <line>
+              <![CDATA[Completed executing SampleTest.beforeClass]]>
+            </line>
+          </reporter-output>
+        </test-method> <!-- beforeClass -->
+        <test-method status="PASS" signature="beforeMethod(java.lang.String)[pri:0, instance:com.flex.testCases.SampleTest@2d928643]" name="beforeMethod" is-config="true" duration-ms="10962" started-at="2018-08-02T11:26:33Z" finished-at="2018-08-02T11:26:44Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[VerifyFaceBookSignup]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+            <line>
+              <![CDATA[Completed executing SampleTest.beforeMethod]]>
+            </line>
+          </reporter-output>
+        </test-method> <!-- beforeMethod -->
+        <test-method status="PASS" signature="VerifyFaceBookSignup()[pri:0, instance:com.flex.testCases.SampleTest@2d928643]" name="VerifyFaceBookSignup" duration-ms="12593" started-at="2018-08-02T11:26:44Z" finished-at="2018-08-02T11:26:57Z">
+          <reporter-output>
+            <line>
+              <![CDATA[Completed executing SampleTest.VerifyFaceBookSignup]]>
+            </line>
+            <line>
+              <![CDATA[TestName = null]]>
+            </line>
+            <line>
+              <![CDATA[Test Method resides in com.flex.testCases.SampleTest]]>
+            </line>
+            <line>
+              <![CDATA[Test Status: Pass]]>
+            </line>
+            <line>
+              <![CDATA[About to begin executing SampleTest.afterMethod]]>
+            </line>
+          </reporter-output>
+        </test-method> <!-- VerifyFaceBookSignup -->
+        <test-method status="PASS" signature="afterMethod()[pri:0, instance:com.flex.testCases.SampleTest@2d928643]" name="afterMethod" is-config="true" duration-ms="930" started-at="2018-08-02T11:26:57Z" finished-at="2018-08-02T11:26:58Z">
+          <reporter-output>
+            <line>
+              <![CDATA[Completed executing SampleTest.afterMethod]]>
+            </line>
+          </reporter-output>
+        </test-method> <!-- afterMethod -->
+        <test-method status="PASS" signature="afterClass()[pri:0, instance:com.flex.testCases.SampleTest@2d928643]" name="afterClass" is-config="true" duration-ms="2" started-at="2018-08-02T11:26:58Z" finished-at="2018-08-02T11:26:58Z">
+          <reporter-output>
+            <line>
+              <![CDATA[Completed executing SampleTest.afterClass]]>
+            </line>
+          </reporter-output>
+        </test-method> <!-- afterClass -->
+        <test-method status="PASS" signature="afterSuite()[pri:0, instance:com.flex.testCases.SampleTest@2d928643]" name="afterSuite" is-config="true" duration-ms="404" started-at="2018-08-02T11:26:58Z" finished-at="2018-08-02T11:26:58Z">
+          <reporter-output>
+            <line>
+              <![CDATA[Completed executing BasePage.afterSuite]]>
+            </line>
+          </reporter-output>
+        </test-method> <!-- afterSuite -->
+      </class> <!-- com.flex.testCases.SampleTest -->
+    </test> <!-- RegressionSuite -->
+  </suite> <!-- FlexSuite -->
+</testng-results>

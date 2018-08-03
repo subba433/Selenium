@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="FlexSuite">
+	<listeners>
+		<listener class-name="com.flex.utility.Listener" />
+	</listeners>
+ 
+    
+    
+ <test name="RegressionSuite">
+		<classes>
+		  <class name="com.flex.testCases.SampleTest">
+		 <methods>  
+	 	  	<include name="VerifyFaceBookSignup">
+		   
+		 <parameter name="TestCaseName" value="VerifyFaceBookSignup"/>
+		  </include> 
+		    	
+		  </methods>
+		 </class>
+		 </classes>
+</test>   
+
+   <!--  <test name="SystemTestBC">
+		<classes>
+		  <class name="com.cgi.flex.testCases.BillingCenter">
+		 <methods> 	 	
+		  <include name="verifyPaymentPlan">
+			  <parameter name="TestCaseName" value="verifyPaymentPlan"/>
+		  </include> 
+		   <include name="verifyPaymentBusinessRule">
+			  <parameter name="TestCaseName" value="verifyPaymentBusinessRule"/>
+		  </include>
+		  
+		 <include name="orangeHRm">
+			  <parameter name="TestCaseName" value="verifyPaymentBusinessRule"/>
+		  </include>  
+		  
+		  </methods>
+		  </class>
+		  </classes>
+</test> 
+  -->
+
+
+
+</suite> <!-- FlexSmokeTestSuite -->
+
+
+

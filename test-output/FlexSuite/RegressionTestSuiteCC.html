@@ -1,0 +1,804 @@
+<html>
+<head>
+<title>TestNG:  RegressionTestSuiteCC</title>
+<link href="../testng.css" rel="stylesheet" type="text/css" />
+<link href="../my-testng.css" rel="stylesheet" type="text/css" />
+
+<style type="text/css">
+.log { display: none;} 
+.stack-trace { display: none;} 
+</style>
+<script type="text/javascript">
+<!--
+function flip(e) {
+  current = e.style.display;
+  if (current == 'block') {
+    e.style.display = 'none';
+    return 0;
+  }
+  else {
+    e.style.display = 'block';
+    return 1;
+  }
+}
+
+function toggleBox(szDivId, elem, msg1, msg2)
+{
+  var res = -1;  if (document.getElementById) {
+    res = flip(document.getElementById(szDivId));
+  }
+  else if (document.all) {
+    // this is the way old msie versions work
+    res = flip(document.all[szDivId]);
+  }
+  if(elem) {
+    if(res == 0) elem.innerHTML = msg1; else elem.innerHTML = msg2;
+  }
+
+}
+
+function toggleAllBoxes() {
+  if (document.getElementsByTagName) {
+    d = document.getElementsByTagName('div');
+    for (i = 0; i < d.length; i++) {
+      if (d[i].className == 'log') {
+        flip(d[i]);
+      }
+    }
+  }
+}
+
+// -->
+</script>
+
+</head>
+<body>
+<h2 align='center'>RegressionTestSuiteCC</h2><table border='1' align="center">
+<tr>
+<td>Tests passed/Failed/Skipped:</td><td>26/3/0</td>
+</tr><tr>
+<td>Started on:</td><td>Tue Jun 27 16:11:09 IST 2017</td>
+</tr>
+<tr><td>Total time:</td><td>7570 seconds (7570276 ms)</td>
+</tr><tr>
+<td>Included groups:</td><td></td>
+</tr><tr>
+<td>Excluded groups:</td><td></td>
+</tr>
+</table><p/>
+<small><i>(Hover the method name to see the test class name)</i></small><p/>
+<table width='100%' border='1' class='invocation-failed'>
+<tr><td colspan='4' align='center'><b>FAILED TESTS</b></td></tr>
+<tr><td><b>Test method</b></td>
+<td width="30%"><b>Exception</b></td>
+<td width="10%"><b>Time (seconds)</b></td>
+<td><b>Instance</b></td>
+</tr>
+<tr>
+<td title='com.cgi.flex.testCases.ClaimCenter.cancelPaymentsTest()'><b>cancelPaymentsTest</b><br>Test class: com.cgi.flex.testCases.ClaimCenter<br/>
+<a href="#Output-724364459" onClick='toggleBox("Output-724364459", this, "Show output", "Hide output");'>Show output</a>
+
+<a href="#Output-724364459" onClick="toggleAllBoxes();">Show all outputs</a>
+<div class='log' id="Output-724364459">
+SignIn Action is successfully performed<br/>
+clickOnTabClaimArrow Action is successfully performed<br/>
+Completed executing ClaimCenter.cancelPaymentsTest<br/>
+TestName = null<br/>
+Test Method resides in com.cgi.flex.testCases.ClaimCenter<br/>
+Test Status: Failed<br/>
+About to begin executing ClaimCenter.afterMethod<br/>
+</div>
+</td>
+<td><div><pre>org.openqa.selenium.NoSuchElementException: Unable to find element with id == ClaimFinancialsChecksDetail:ClaimFinancialsChecksDetailScreen:ClaimFinancialsChecksDetail_DeleteButton-btnInnerEl (WARNING: The server did not provide any stacktrace information)
+Command duration or timeout: 60.19 seconds
+For documentation on this error, please visit: http://seleniumhq.org/exceptions/no_such_element.html
+Build info: version: &apos;2.53.0&apos;, revision: &apos;35ae25b1534ae328c771e0856c93e187490ca824&apos;, time: &apos;2016-03-15 10:43:46&apos;
+System info: host: &apos;INL-DVDNLC2&apos;, ip: &apos;10.154.77.57&apos;, os.name: &apos;Windows 7&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;6.1&apos;, java.version: &apos;1.7.0_45&apos;
+*** Element info: {Using=id, value=ClaimFinancialsChecksDetail:ClaimFinancialsChecksDetailScreen:ClaimFinancialsChecksDetail_DeleteButton-btnInnerEl}
+Session ID: 7d0141cd-8db4-47b2-8c29-db3b30ffbcb7
+Driver info: org.openqa.selenium.ie.InternetExplorerDriver
+Capabilities [{platform=WINDOWS, javascriptEnabled=true, browserName=internet explorer, unexpectedAlertBehaviour=dismiss, se:ieOptions={elementScrollBehavior=0, ignoreZoomSetting=false, enablePersistentHover=true, ie.ensureCleanSession=false, enableElementCacheCleanup=true, ie.enableFullPageScreenshot=true, ie.useLegacyFileUploadDialogHandling=false, ie.fileUploadDialogTimeout=3000, ie.forceShellWindowsApi=false, ignoreProtectedModeSettings=true, requireWindowFocus=false, initialBrowserUrl=http://localhost:44888/, ie.forceCreateProcessApi=false, nativeEvents=true, browserAttachTimeout=0, ie.browserCommandLineSwitches=}, version=11, pageLoadStrategy=normal}]
+	at org.openqa.selenium.remote.ErrorHandler.createThrowable(ErrorHandler.java:206)
+	at org.openqa.selenium.remote.ErrorHandler.throwIfResponseFailed(ErrorHandler.java:158)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:678)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:363)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElementById(RemoteWebDriver.java:413)
+	at org.openqa.selenium.By$ById.findElement(By.java:218)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:355)
+	at com.cgi.flex.pages.CheckDetailsPage.btndelete(CheckDetailsPage.java:22)
+	at com.cgi.flex.testCases.ClaimCenter.cancelPaymentsTest(ClaimCenter.java:3027)
+... Removed 28 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace724364459", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace724364459'><pre>org.openqa.selenium.NoSuchElementException: Unable to find element with id == ClaimFinancialsChecksDetail:ClaimFinancialsChecksDetailScreen:ClaimFinancialsChecksDetail_DeleteButton-btnInnerEl (WARNING: The server did not provide any stacktrace information)
+Command duration or timeout: 60.19 seconds
+For documentation on this error, please visit: http://seleniumhq.org/exceptions/no_such_element.html
+Build info: version: &apos;2.53.0&apos;, revision: &apos;35ae25b1534ae328c771e0856c93e187490ca824&apos;, time: &apos;2016-03-15 10:43:46&apos;
+System info: host: &apos;INL-DVDNLC2&apos;, ip: &apos;10.154.77.57&apos;, os.name: &apos;Windows 7&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;6.1&apos;, java.version: &apos;1.7.0_45&apos;
+*** Element info: {Using=id, value=ClaimFinancialsChecksDetail:ClaimFinancialsChecksDetailScreen:ClaimFinancialsChecksDetail_DeleteButton-btnInnerEl}
+Session ID: 7d0141cd-8db4-47b2-8c29-db3b30ffbcb7
+Driver info: org.openqa.selenium.ie.InternetExplorerDriver
+Capabilities [{platform=WINDOWS, javascriptEnabled=true, browserName=internet explorer, unexpectedAlertBehaviour=dismiss, se:ieOptions={elementScrollBehavior=0, ignoreZoomSetting=false, enablePersistentHover=true, ie.ensureCleanSession=false, enableElementCacheCleanup=true, ie.enableFullPageScreenshot=true, ie.useLegacyFileUploadDialogHandling=false, ie.fileUploadDialogTimeout=3000, ie.forceShellWindowsApi=false, ignoreProtectedModeSettings=true, requireWindowFocus=false, initialBrowserUrl=http://localhost:44888/, ie.forceCreateProcessApi=false, nativeEvents=true, browserAttachTimeout=0, ie.browserCommandLineSwitches=}, version=11, pageLoadStrategy=normal}]
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:57)
+	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+	at java.lang.reflect.Constructor.newInstance(Constructor.java:526)
+	at org.openqa.selenium.remote.ErrorHandler.createThrowable(ErrorHandler.java:206)
+	at org.openqa.selenium.remote.ErrorHandler.throwIfResponseFailed(ErrorHandler.java:158)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:678)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:363)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElementById(RemoteWebDriver.java:413)
+	at org.openqa.selenium.By$ById.findElement(By.java:218)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:355)
+	at com.cgi.flex.pages.CheckDetailsPage.btndelete(CheckDetailsPage.java:22)
+	at com.cgi.flex.testCases.ClaimCenter.cancelPaymentsTest(ClaimCenter.java:3027)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:57)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:606)
+	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:80)
+	at org.testng.internal.Invoker.invokeMethod(Invoker.java:714)
+	at org.testng.internal.Invoker.invokeTestMethod(Invoker.java:901)
+	at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:1231)
+	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:127)
+	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:111)
+	at org.testng.TestRunner.privateRun(TestRunner.java:767)
+	at org.testng.TestRunner.run(TestRunner.java:617)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:334)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:329)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:291)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:240)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:86)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1198)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1123)
+	at org.testng.TestNG.run(TestNG.java:1031)
+	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:132)
+	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:236)
+	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:81)
+</pre></div></td>
+<td>334</td>
+<td>com.cgi.flex.testCases.ClaimCenter@665de723</td></tr>
+<tr>
+<td title='com.cgi.flex.testCases.ClaimCenter.createPaymentsTest()'><b>createPaymentsTest</b><br>Test class: com.cgi.flex.testCases.ClaimCenter<br/>
+<a href="#Output-44277997" onClick='toggleBox("Output-44277997", this, "Show output", "Hide output");'>Show output</a>
+
+<a href="#Output-44277997" onClick="toggleAllBoxes();">Show all outputs</a>
+<div class='log' id="Output-44277997">
+SignIn Action is successfully performed<br/>
+clickOnTabClaimArrow Action is successfully performed<br/>
+Completed executing ClaimCenter.createPaymentsTest<br/>
+TestName = null<br/>
+Test Method resides in com.cgi.flex.testCases.ClaimCenter<br/>
+Test Status: Failed<br/>
+About to begin executing ClaimCenter.afterMethod<br/>
+</div>
+</td>
+<td><div><pre>org.openqa.selenium.NoSuchElementException: Unable to find element with id == NormalCreateCheckWizard:CheckWizard_CheckPayeesScreen:NewCheckPayeeDV:PrimaryPayee_Name-inputEl (WARNING: The server did not provide any stacktrace information)
+Command duration or timeout: 60.29 seconds
+For documentation on this error, please visit: http://seleniumhq.org/exceptions/no_such_element.html
+Build info: version: &apos;2.53.0&apos;, revision: &apos;35ae25b1534ae328c771e0856c93e187490ca824&apos;, time: &apos;2016-03-15 10:43:46&apos;
+System info: host: &apos;INL-DVDNLC2&apos;, ip: &apos;10.154.77.57&apos;, os.name: &apos;Windows 7&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;6.1&apos;, java.version: &apos;1.7.0_45&apos;
+*** Element info: {Using=id, value=NormalCreateCheckWizard:CheckWizard_CheckPayeesScreen:NewCheckPayeeDV:PrimaryPayee_Name-inputEl}
+Session ID: 69447e69-e48e-4aec-acda-af2831b0fce1
+Driver info: org.openqa.selenium.ie.InternetExplorerDriver
+Capabilities [{platform=WINDOWS, javascriptEnabled=true, browserName=internet explorer, unexpectedAlertBehaviour=dismiss, se:ieOptions={elementScrollBehavior=0, ignoreZoomSetting=false, enablePersistentHover=true, ie.ensureCleanSession=false, enableElementCacheCleanup=true, ie.enableFullPageScreenshot=true, ie.useLegacyFileUploadDialogHandling=false, ie.fileUploadDialogTimeout=3000, ie.forceShellWindowsApi=false, ignoreProtectedModeSettings=true, requireWindowFocus=false, initialBrowserUrl=http://localhost:45243/, ie.forceCreateProcessApi=false, nativeEvents=true, browserAttachTimeout=0, ie.browserCommandLineSwitches=}, version=11, pageLoadStrategy=normal}]
+	at org.openqa.selenium.remote.ErrorHandler.createThrowable(ErrorHandler.java:206)
+	at org.openqa.selenium.remote.ErrorHandler.throwIfResponseFailed(ErrorHandler.java:158)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:678)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:363)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElementById(RemoteWebDriver.java:413)
+	at org.openqa.selenium.By$ById.findElement(By.java:218)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:355)
+	at com.cgi.flex.pages.EnterPayeeInformationPage.dropdownNamePrimaryPayeeEPI(EnterPayeeInformationPage.java:21)
+	at com.cgi.flex.testCases.ClaimCenter.createPaymentsTest(ClaimCenter.java:2711)
+... Removed 28 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace44277997", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace44277997'><pre>org.openqa.selenium.NoSuchElementException: Unable to find element with id == NormalCreateCheckWizard:CheckWizard_CheckPayeesScreen:NewCheckPayeeDV:PrimaryPayee_Name-inputEl (WARNING: The server did not provide any stacktrace information)
+Command duration or timeout: 60.29 seconds
+For documentation on this error, please visit: http://seleniumhq.org/exceptions/no_such_element.html
+Build info: version: &apos;2.53.0&apos;, revision: &apos;35ae25b1534ae328c771e0856c93e187490ca824&apos;, time: &apos;2016-03-15 10:43:46&apos;
+System info: host: &apos;INL-DVDNLC2&apos;, ip: &apos;10.154.77.57&apos;, os.name: &apos;Windows 7&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;6.1&apos;, java.version: &apos;1.7.0_45&apos;
+*** Element info: {Using=id, value=NormalCreateCheckWizard:CheckWizard_CheckPayeesScreen:NewCheckPayeeDV:PrimaryPayee_Name-inputEl}
+Session ID: 69447e69-e48e-4aec-acda-af2831b0fce1
+Driver info: org.openqa.selenium.ie.InternetExplorerDriver
+Capabilities [{platform=WINDOWS, javascriptEnabled=true, browserName=internet explorer, unexpectedAlertBehaviour=dismiss, se:ieOptions={elementScrollBehavior=0, ignoreZoomSetting=false, enablePersistentHover=true, ie.ensureCleanSession=false, enableElementCacheCleanup=true, ie.enableFullPageScreenshot=true, ie.useLegacyFileUploadDialogHandling=false, ie.fileUploadDialogTimeout=3000, ie.forceShellWindowsApi=false, ignoreProtectedModeSettings=true, requireWindowFocus=false, initialBrowserUrl=http://localhost:45243/, ie.forceCreateProcessApi=false, nativeEvents=true, browserAttachTimeout=0, ie.browserCommandLineSwitches=}, version=11, pageLoadStrategy=normal}]
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:57)
+	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+	at java.lang.reflect.Constructor.newInstance(Constructor.java:526)
+	at org.openqa.selenium.remote.ErrorHandler.createThrowable(ErrorHandler.java:206)
+	at org.openqa.selenium.remote.ErrorHandler.throwIfResponseFailed(ErrorHandler.java:158)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:678)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:363)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElementById(RemoteWebDriver.java:413)
+	at org.openqa.selenium.By$ById.findElement(By.java:218)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:355)
+	at com.cgi.flex.pages.EnterPayeeInformationPage.dropdownNamePrimaryPayeeEPI(EnterPayeeInformationPage.java:21)
+	at com.cgi.flex.testCases.ClaimCenter.createPaymentsTest(ClaimCenter.java:2711)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:57)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:606)
+	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:80)
+	at org.testng.internal.Invoker.invokeMethod(Invoker.java:714)
+	at org.testng.internal.Invoker.invokeTestMethod(Invoker.java:901)
+	at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:1231)
+	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:127)
+	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:111)
+	at org.testng.TestRunner.privateRun(TestRunner.java:767)
+	at org.testng.TestRunner.run(TestRunner.java:617)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:334)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:329)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:291)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:240)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:86)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1198)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1123)
+	at org.testng.TestNG.run(TestNG.java:1031)
+	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:132)
+	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:236)
+	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:81)
+</pre></div></td>
+<td>206</td>
+<td>com.cgi.flex.testCases.ClaimCenter@665de723</td></tr>
+<tr>
+<td title='com.cgi.flex.testCases.ClaimCenter.deductionTest()'><b>deductionTest</b><br>Test class: com.cgi.flex.testCases.ClaimCenter<br/>
+<a href="#Output-821883997" onClick='toggleBox("Output-821883997", this, "Show output", "Hide output");'>Show output</a>
+
+<a href="#Output-821883997" onClick="toggleAllBoxes();">Show all outputs</a>
+<div class='log' id="Output-821883997">
+SignIn Action is successfully performed<br/>
+clickOnTabClaimArrow Action is successfully performed<br/>
+Completed executing ClaimCenter.deductionTest<br/>
+TestName = null<br/>
+Test Method resides in com.cgi.flex.testCases.ClaimCenter<br/>
+Test Status: Failed<br/>
+About to begin executing ClaimCenter.afterMethod<br/>
+</div>
+</td>
+<td><div><pre>org.openqa.selenium.NoSuchElementException: Unable to find element with id == NormalCreateCheckWizard:CheckWizard_CheckPayeesScreen:NewCheckPayeeDV:PrimaryPayee_Name-inputEl (WARNING: The server did not provide any stacktrace information)
+Command duration or timeout: 60.28 seconds
+For documentation on this error, please visit: http://seleniumhq.org/exceptions/no_such_element.html
+Build info: version: &apos;2.53.0&apos;, revision: &apos;35ae25b1534ae328c771e0856c93e187490ca824&apos;, time: &apos;2016-03-15 10:43:46&apos;
+System info: host: &apos;INL-DVDNLC2&apos;, ip: &apos;10.154.77.57&apos;, os.name: &apos;Windows 7&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;6.1&apos;, java.version: &apos;1.7.0_45&apos;
+*** Element info: {Using=id, value=NormalCreateCheckWizard:CheckWizard_CheckPayeesScreen:NewCheckPayeeDV:PrimaryPayee_Name-inputEl}
+Session ID: 550f8275-6899-4f10-bdd8-4040790d776e
+Driver info: org.openqa.selenium.ie.InternetExplorerDriver
+Capabilities [{platform=WINDOWS, javascriptEnabled=true, browserName=internet explorer, unexpectedAlertBehaviour=dismiss, se:ieOptions={elementScrollBehavior=0, ignoreZoomSetting=false, enablePersistentHover=true, ie.ensureCleanSession=false, enableElementCacheCleanup=true, ie.enableFullPageScreenshot=true, ie.useLegacyFileUploadDialogHandling=false, ie.fileUploadDialogTimeout=3000, ie.forceShellWindowsApi=false, ignoreProtectedModeSettings=true, requireWindowFocus=false, initialBrowserUrl=http://localhost:30988/, ie.forceCreateProcessApi=false, nativeEvents=true, browserAttachTimeout=0, ie.browserCommandLineSwitches=}, version=11, pageLoadStrategy=normal}]
+	at org.openqa.selenium.remote.ErrorHandler.createThrowable(ErrorHandler.java:206)
+	at org.openqa.selenium.remote.ErrorHandler.throwIfResponseFailed(ErrorHandler.java:158)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:678)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:363)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElementById(RemoteWebDriver.java:413)
+	at org.openqa.selenium.By$ById.findElement(By.java:218)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:355)
+	at com.cgi.flex.pages.EnterPayeeInformationPage.dropdownNamePrimaryPayeeEPI(EnterPayeeInformationPage.java:21)
+	at com.cgi.flex.testCases.ClaimCenter.deductionTest(ClaimCenter.java:2874)
+... Removed 28 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace821883997", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace821883997'><pre>org.openqa.selenium.NoSuchElementException: Unable to find element with id == NormalCreateCheckWizard:CheckWizard_CheckPayeesScreen:NewCheckPayeeDV:PrimaryPayee_Name-inputEl (WARNING: The server did not provide any stacktrace information)
+Command duration or timeout: 60.28 seconds
+For documentation on this error, please visit: http://seleniumhq.org/exceptions/no_such_element.html
+Build info: version: &apos;2.53.0&apos;, revision: &apos;35ae25b1534ae328c771e0856c93e187490ca824&apos;, time: &apos;2016-03-15 10:43:46&apos;
+System info: host: &apos;INL-DVDNLC2&apos;, ip: &apos;10.154.77.57&apos;, os.name: &apos;Windows 7&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;6.1&apos;, java.version: &apos;1.7.0_45&apos;
+*** Element info: {Using=id, value=NormalCreateCheckWizard:CheckWizard_CheckPayeesScreen:NewCheckPayeeDV:PrimaryPayee_Name-inputEl}
+Session ID: 550f8275-6899-4f10-bdd8-4040790d776e
+Driver info: org.openqa.selenium.ie.InternetExplorerDriver
+Capabilities [{platform=WINDOWS, javascriptEnabled=true, browserName=internet explorer, unexpectedAlertBehaviour=dismiss, se:ieOptions={elementScrollBehavior=0, ignoreZoomSetting=false, enablePersistentHover=true, ie.ensureCleanSession=false, enableElementCacheCleanup=true, ie.enableFullPageScreenshot=true, ie.useLegacyFileUploadDialogHandling=false, ie.fileUploadDialogTimeout=3000, ie.forceShellWindowsApi=false, ignoreProtectedModeSettings=true, requireWindowFocus=false, initialBrowserUrl=http://localhost:30988/, ie.forceCreateProcessApi=false, nativeEvents=true, browserAttachTimeout=0, ie.browserCommandLineSwitches=}, version=11, pageLoadStrategy=normal}]
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:57)
+	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+	at java.lang.reflect.Constructor.newInstance(Constructor.java:526)
+	at org.openqa.selenium.remote.ErrorHandler.createThrowable(ErrorHandler.java:206)
+	at org.openqa.selenium.remote.ErrorHandler.throwIfResponseFailed(ErrorHandler.java:158)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:678)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:363)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElementById(RemoteWebDriver.java:413)
+	at org.openqa.selenium.By$ById.findElement(By.java:218)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:355)
+	at com.cgi.flex.pages.EnterPayeeInformationPage.dropdownNamePrimaryPayeeEPI(EnterPayeeInformationPage.java:21)
+	at com.cgi.flex.testCases.ClaimCenter.deductionTest(ClaimCenter.java:2874)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:57)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:606)
+	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:80)
+	at org.testng.internal.Invoker.invokeMethod(Invoker.java:714)
+	at org.testng.internal.Invoker.invokeTestMethod(Invoker.java:901)
+	at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:1231)
+	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:127)
+	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:111)
+	at org.testng.TestRunner.privateRun(TestRunner.java:767)
+	at org.testng.TestRunner.run(TestRunner.java:617)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:334)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:329)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:291)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:240)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:86)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1198)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1123)
+	at org.testng.TestNG.run(TestNG.java:1031)
+	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:132)
+	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:236)
+	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:81)
+</pre></div></td>
+<td>315</td>
+<td>com.cgi.flex.testCases.ClaimCenter@665de723</td></tr>
+</table><p>
+<table width='100%' border='1' class='invocation-passed'>
+<tr><td colspan='4' align='center'><b>PASSED TESTS</b></td></tr>
+<tr><td><b>Test method</b></td>
+<td width="30%"><b>Exception</b></td>
+<td width="10%"><b>Time (seconds)</b></td>
+<td><b>Instance</b></td>
+</tr>
+<tr>
+<td title='com.cgi.flex.testCases.ClaimCenter.claimInspectionTest()'><b>claimInspectionTest</b><br>Test class: com.cgi.flex.testCases.ClaimCenter<br/>
+<a href="#Output-941592421" onClick='toggleBox("Output-941592421", this, "Show output", "Hide output");'>Show output</a>
+
+<a href="#Output-941592421" onClick="toggleAllBoxes();">Show all outputs</a>
+<div class='log' id="Output-941592421">
+SignIn Action is successfully performed<br/>
+clickOnTabClaimArrow Action is successfully performed<br/>
+Completed executing ClaimCenter.claimInspectionTest<br/>
+TestName = null<br/>
+Test Method resides in com.cgi.flex.testCases.ClaimCenter<br/>
+Test Status: Pass<br/>
+About to begin executing ClaimCenter.afterMethod<br/>
+</div>
+</td>
+<td></td>
+<td>235</td>
+<td>com.cgi.flex.testCases.ClaimCenter@665de723</td></tr>
+<tr>
+<td title='com.cgi.flex.testCases.ClaimCenter.claimLifeCycle01Test()'><b>claimLifeCycle01Test</b><br>Test class: com.cgi.flex.testCases.ClaimCenter<br/>
+<a href="#Output-1329791792" onClick='toggleBox("Output-1329791792", this, "Show output", "Hide output");'>Show output</a>
+
+<a href="#Output-1329791792" onClick="toggleAllBoxes();">Show all outputs</a>
+<div class='log' id="Output-1329791792">
+SignIn Action is successfully performed<br/>
+clickOnTabClaimArrow Action is successfully performed<br/>
+Completed executing ClaimCenter.claimLifeCycle01Test<br/>
+TestName = null<br/>
+Test Method resides in com.cgi.flex.testCases.ClaimCenter<br/>
+Test Status: Pass<br/>
+About to begin executing ClaimCenter.afterMethod<br/>
+</div>
+</td>
+<td></td>
+<td>161</td>
+<td>com.cgi.flex.testCases.ClaimCenter@665de723</td></tr>
+<tr>
+<td title='com.cgi.flex.testCases.ClaimCenter.claimLifeCycle02Test()'><b>claimLifeCycle02Test</b><br>Test class: com.cgi.flex.testCases.ClaimCenter<br/>
+<a href="#Output-296959026" onClick='toggleBox("Output-296959026", this, "Show output", "Hide output");'>Show output</a>
+
+<a href="#Output-296959026" onClick="toggleAllBoxes();">Show all outputs</a>
+<div class='log' id="Output-296959026">
+SignIn Action is successfully performed<br/>
+clickOnTabClaimArrow Action is successfully performed<br/>
+Completed executing ClaimCenter.claimLifeCycle02Test<br/>
+TestName = null<br/>
+Test Method resides in com.cgi.flex.testCases.ClaimCenter<br/>
+Test Status: Pass<br/>
+About to begin executing ClaimCenter.afterMethod<br/>
+</div>
+</td>
+<td></td>
+<td>161</td>
+<td>com.cgi.flex.testCases.ClaimCenter@665de723</td></tr>
+<tr>
+<td title='com.cgi.flex.testCases.ClaimCenter.claimLifeCycle03Test()'><b>claimLifeCycle03Test</b><br>Test class: com.cgi.flex.testCases.ClaimCenter<br/>
+<a href="#Output-1382138861" onClick='toggleBox("Output-1382138861", this, "Show output", "Hide output");'>Show output</a>
+
+<a href="#Output-1382138861" onClick="toggleAllBoxes();">Show all outputs</a>
+<div class='log' id="Output-1382138861">
+SignIn Action is successfully performed<br/>
+clickOnTabClaimArrow Action is successfully performed<br/>
+Completed executing ClaimCenter.claimLifeCycle03Test<br/>
+TestName = null<br/>
+Test Method resides in com.cgi.flex.testCases.ClaimCenter<br/>
+Test Status: Pass<br/>
+About to begin executing ClaimCenter.afterMethod<br/>
+</div>
+</td>
+<td></td>
+<td>161</td>
+<td>com.cgi.flex.testCases.ClaimCenter@665de723</td></tr>
+<tr>
+<td title='com.cgi.flex.testCases.ClaimCenter.claimLifeCycle04Test()'><b>claimLifeCycle04Test</b><br>Test class: com.cgi.flex.testCases.ClaimCenter<br/>
+<a href="#Output-898029763" onClick='toggleBox("Output-898029763", this, "Show output", "Hide output");'>Show output</a>
+
+<a href="#Output-898029763" onClick="toggleAllBoxes();">Show all outputs</a>
+<div class='log' id="Output-898029763">
+SignIn Action is successfully performed<br/>
+clickOnTabClaimArrow Action is successfully performed<br/>
+Completed executing ClaimCenter.claimLifeCycle04Test<br/>
+TestName = null<br/>
+Test Method resides in com.cgi.flex.testCases.ClaimCenter<br/>
+Test Status: Pass<br/>
+About to begin executing ClaimCenter.afterMethod<br/>
+</div>
+</td>
+<td></td>
+<td>161</td>
+<td>com.cgi.flex.testCases.ClaimCenter@665de723</td></tr>
+<tr>
+<td title='com.cgi.flex.testCases.ClaimCenter.claimLifeCycle05Test()'><b>claimLifeCycle05Test</b><br>Test class: com.cgi.flex.testCases.ClaimCenter<br/>
+<a href="#Output-1860391670" onClick='toggleBox("Output-1860391670", this, "Show output", "Hide output");'>Show output</a>
+
+<a href="#Output-1860391670" onClick="toggleAllBoxes();">Show all outputs</a>
+<div class='log' id="Output-1860391670">
+SignIn Action is successfully performed<br/>
+clickOnTabClaimArrow Action is successfully performed<br/>
+Completed executing ClaimCenter.claimLifeCycle05Test<br/>
+TestName = null<br/>
+Test Method resides in com.cgi.flex.testCases.ClaimCenter<br/>
+Test Status: Pass<br/>
+About to begin executing ClaimCenter.afterMethod<br/>
+</div>
+</td>
+<td></td>
+<td>161</td>
+<td>com.cgi.flex.testCases.ClaimCenter@665de723</td></tr>
+<tr>
+<td title='com.cgi.flex.testCases.ClaimCenter.enterLossDetailsTest()'><b>enterLossDetailsTest</b><br>Test class: com.cgi.flex.testCases.ClaimCenter<br/>
+<a href="#Output-1048008555" onClick='toggleBox("Output-1048008555", this, "Show output", "Hide output");'>Show output</a>
+
+<a href="#Output-1048008555" onClick="toggleAllBoxes();">Show all outputs</a>
+<div class='log' id="Output-1048008555">
+SignIn Action is successfully performed<br/>
+clickOnClaimArrowtab Action is performed successfully <br/>
+Completed executing ClaimCenter.enterLossDetailsTest<br/>
+TestName = null<br/>
+Test Method resides in com.cgi.flex.testCases.ClaimCenter<br/>
+Test Status: Pass<br/>
+About to begin executing ClaimCenter.afterMethod<br/>
+</div>
+</td>
+<td></td>
+<td>191</td>
+<td>com.cgi.flex.testCases.ClaimCenter@665de723</td></tr>
+<tr>
+<td title='com.cgi.flex.testCases.ClaimCenter.newClaimCreationTest()'><b>newClaimCreationTest</b><br>Test class: com.cgi.flex.testCases.ClaimCenter<br/>
+<a href="#Output-911166609" onClick='toggleBox("Output-911166609", this, "Show output", "Hide output");'>Show output</a>
+
+<a href="#Output-911166609" onClick="toggleAllBoxes();">Show all outputs</a>
+<div class='log' id="Output-911166609">
+SignIn Action is successfully performed<br/>
+clickOnClaimArrowtab Action is performed successfully <br/>
+Completed executing ClaimCenter.newClaimCreationTest<br/>
+TestName = null<br/>
+Test Method resides in com.cgi.flex.testCases.ClaimCenter<br/>
+Test Status: Pass<br/>
+About to begin executing ClaimCenter.afterMethod<br/>
+</div>
+</td>
+<td></td>
+<td>201</td>
+<td>com.cgi.flex.testCases.ClaimCenter@665de723</td></tr>
+<tr>
+<td title='com.cgi.flex.testCases.ClaimCenter.policySearchandValidationTest()'><b>policySearchandValidationTest</b><br>Test class: com.cgi.flex.testCases.ClaimCenter<br/>
+<a href="#Output-1145047460" onClick='toggleBox("Output-1145047460", this, "Show output", "Hide output");'>Show output</a>
+
+<a href="#Output-1145047460" onClick="toggleAllBoxes();">Show all outputs</a>
+<div class='log' id="Output-1145047460">
+SignIn Action is successfully performed<br/>
+clickOnClaimArrowtab Action is performed successfully <br/>
+Completed executing ClaimCenter.policySearchandValidationTest<br/>
+TestName = null<br/>
+Test Method resides in com.cgi.flex.testCases.ClaimCenter<br/>
+Test Status: Pass<br/>
+About to begin executing ClaimCenter.afterMethod<br/>
+</div>
+</td>
+<td></td>
+<td>202</td>
+<td>com.cgi.flex.testCases.ClaimCenter@665de723</td></tr>
+<tr>
+<td title='com.cgi.flex.testCases.ClaimCenter.verifyCostCategoryCoverageMappingCCTest()'><b>verifyCostCategoryCoverageMappingCCTest</b><br>Test class: com.cgi.flex.testCases.ClaimCenter<br/>
+<a href="#Output-630600705" onClick='toggleBox("Output-630600705", this, "Show output", "Hide output");'>Show output</a>
+
+<a href="#Output-630600705" onClick="toggleAllBoxes();">Show all outputs</a>
+<div class='log' id="Output-630600705">
+SignIn Action is successfully performed<br/>
+clickOnTabClaimArrow Action is successfully performed<br/>
+Completed executing ClaimCenter.verifyCostCategoryCoverageMappingCCTest<br/>
+TestName = null<br/>
+Test Method resides in com.cgi.flex.testCases.ClaimCenter<br/>
+Test Status: Pass<br/>
+About to begin executing ClaimCenter.afterMethod<br/>
+</div>
+</td>
+<td></td>
+<td>219</td>
+<td>com.cgi.flex.testCases.ClaimCenter@665de723</td></tr>
+<tr>
+<td title='com.cgi.flex.testCases.ClaimCenter.verifyCostCategoryCoverageMappingLCTest()'><b>verifyCostCategoryCoverageMappingLCTest</b><br>Test class: com.cgi.flex.testCases.ClaimCenter<br/>
+<a href="#Output-232080555" onClick='toggleBox("Output-232080555", this, "Show output", "Hide output");'>Show output</a>
+
+<a href="#Output-232080555" onClick="toggleAllBoxes();">Show all outputs</a>
+<div class='log' id="Output-232080555">
+SignIn Action is successfully performed<br/>
+clickOnTabClaimArrow Action is successfully performed<br/>
+Completed executing ClaimCenter.verifyCostCategoryCoverageMappingLCTest<br/>
+TestName = null<br/>
+Test Method resides in com.cgi.flex.testCases.ClaimCenter<br/>
+Test Status: Pass<br/>
+About to begin executing ClaimCenter.afterMethod<br/>
+</div>
+</td>
+<td></td>
+<td>339</td>
+<td>com.cgi.flex.testCases.ClaimCenter@665de723</td></tr>
+<tr>
+<td title='com.cgi.flex.testCases.ClaimCenter.verifyCostCategoryCoverageMappingLECTest()'><b>verifyCostCategoryCoverageMappingLECTest</b><br>Test class: com.cgi.flex.testCases.ClaimCenter<br/>
+<a href="#Output-272620200" onClick='toggleBox("Output-272620200", this, "Show output", "Hide output");'>Show output</a>
+
+<a href="#Output-272620200" onClick="toggleAllBoxes();">Show all outputs</a>
+<div class='log' id="Output-272620200">
+SignIn Action is successfully performed<br/>
+clickOnTabClaimArrow Action is successfully performed<br/>
+Completed executing ClaimCenter.verifyCostCategoryCoverageMappingLECTest<br/>
+TestName = null<br/>
+Test Method resides in com.cgi.flex.testCases.ClaimCenter<br/>
+Test Status: Pass<br/>
+About to begin executing ClaimCenter.afterMethod<br/>
+</div>
+</td>
+<td></td>
+<td>279</td>
+<td>com.cgi.flex.testCases.ClaimCenter@665de723</td></tr>
+<tr>
+<td title='com.cgi.flex.testCases.ClaimCenter.verifyCostCategoryCoverageMappingPOFTest()'><b>verifyCostCategoryCoverageMappingPOFTest</b><br>Test class: com.cgi.flex.testCases.ClaimCenter<br/>
+<a href="#Output-85501610" onClick='toggleBox("Output-85501610", this, "Show output", "Hide output");'>Show output</a>
+
+<a href="#Output-85501610" onClick="toggleAllBoxes();">Show all outputs</a>
+<div class='log' id="Output-85501610">
+SignIn Action is successfully performed<br/>
+clickOnTabClaimArrow Action is successfully performed<br/>
+Completed executing ClaimCenter.verifyCostCategoryCoverageMappingPOFTest<br/>
+TestName = null<br/>
+Test Method resides in com.cgi.flex.testCases.ClaimCenter<br/>
+Test Status: Pass<br/>
+About to begin executing ClaimCenter.afterMethod<br/>
+</div>
+</td>
+<td></td>
+<td>240</td>
+<td>com.cgi.flex.testCases.ClaimCenter@665de723</td></tr>
+<tr>
+<td title='com.cgi.flex.testCases.ClaimCenter.verifyCoverabilityDecisionPerDemandTest()'><b>verifyCoverabilityDecisionPerDemandTest</b><br>Test class: com.cgi.flex.testCases.ClaimCenter<br/>
+<a href="#Output-294314572" onClick='toggleBox("Output-294314572", this, "Show output", "Hide output");'>Show output</a>
+
+<a href="#Output-294314572" onClick="toggleAllBoxes();">Show all outputs</a>
+<div class='log' id="Output-294314572">
+SignIn Action is successfully performed<br/>
+clickOnTabClaimArrow Action is successfully performed<br/>
+Completed executing ClaimCenter.verifyCoverabilityDecisionPerDemandTest<br/>
+TestName = null<br/>
+Test Method resides in com.cgi.flex.testCases.ClaimCenter<br/>
+Test Status: Pass<br/>
+About to begin executing ClaimCenter.afterMethod<br/>
+</div>
+</td>
+<td></td>
+<td>303</td>
+<td>com.cgi.flex.testCases.ClaimCenter@665de723</td></tr>
+<tr>
+<td title='com.cgi.flex.testCases.ClaimCenter.verifyCoverabilityDecisionPerDemandWithYesTest()'><b>verifyCoverabilityDecisionPerDemandWithYesTest</b><br>Test class: com.cgi.flex.testCases.ClaimCenter<br/>
+<a href="#Output-521273467" onClick='toggleBox("Output-521273467", this, "Show output", "Hide output");'>Show output</a>
+
+<a href="#Output-521273467" onClick="toggleAllBoxes();">Show all outputs</a>
+<div class='log' id="Output-521273467">
+SignIn Action is successfully performed<br/>
+clickOnTabClaimArrow Action is successfully performed<br/>
+Completed executing ClaimCenter.verifyCoverabilityDecisionPerDemandWithYesTest<br/>
+TestName = null<br/>
+Test Method resides in com.cgi.flex.testCases.ClaimCenter<br/>
+Test Status: Pass<br/>
+About to begin executing ClaimCenter.afterMethod<br/>
+</div>
+</td>
+<td></td>
+<td>212</td>
+<td>com.cgi.flex.testCases.ClaimCenter@665de723</td></tr>
+<tr>
+<td title='com.cgi.flex.testCases.ClaimCenter.verifyCoverabilityDecisionTest()'><b>verifyCoverabilityDecisionTest</b><br>Test class: com.cgi.flex.testCases.ClaimCenter<br/>
+<a href="#Output-262480203" onClick='toggleBox("Output-262480203", this, "Show output", "Hide output");'>Show output</a>
+
+<a href="#Output-262480203" onClick="toggleAllBoxes();">Show all outputs</a>
+<div class='log' id="Output-262480203">
+SignIn Action is successfully performed<br/>
+clickOnClaimArrowtab Action is performed successfully <br/>
+Completed executing ClaimCenter.verifyCoverabilityDecisionTest<br/>
+TestName = null<br/>
+Test Method resides in com.cgi.flex.testCases.ClaimCenter<br/>
+Test Status: Pass<br/>
+About to begin executing ClaimCenter.afterMethod<br/>
+</div>
+</td>
+<td></td>
+<td>192</td>
+<td>com.cgi.flex.testCases.ClaimCenter@665de723</td></tr>
+<tr>
+<td title='com.cgi.flex.testCases.ClaimCenter.verifyExposureContentCoverageTest()'><b>verifyExposureContentCoverageTest</b><br>Test class: com.cgi.flex.testCases.ClaimCenter<br/>
+<a href="#Output-2069222864" onClick='toggleBox("Output-2069222864", this, "Show output", "Hide output");'>Show output</a>
+
+<a href="#Output-2069222864" onClick="toggleAllBoxes();">Show all outputs</a>
+<div class='log' id="Output-2069222864">
+SignIn Action is successfully performed<br/>
+clickOnTabClaimArrow Action is successfully performed<br/>
+Completed executing ClaimCenter.verifyExposureContentCoverageTest<br/>
+TestName = null<br/>
+Test Method resides in com.cgi.flex.testCases.ClaimCenter<br/>
+Test Status: Pass<br/>
+About to begin executing ClaimCenter.afterMethod<br/>
+</div>
+</td>
+<td></td>
+<td>644</td>
+<td>com.cgi.flex.testCases.ClaimCenter@665de723</td></tr>
+<tr>
+<td title='com.cgi.flex.testCases.ClaimCenter.verifyExposureLegalExpenseCoverageTest()'><b>verifyExposureLegalExpenseCoverageTest</b><br>Test class: com.cgi.flex.testCases.ClaimCenter<br/>
+<a href="#Output-450580789" onClick='toggleBox("Output-450580789", this, "Show output", "Hide output");'>Show output</a>
+
+<a href="#Output-450580789" onClick="toggleAllBoxes();">Show all outputs</a>
+<div class='log' id="Output-450580789">
+SignIn Action is successfully performed<br/>
+clickOnTabClaimArrow Action is successfully performed<br/>
+Completed executing ClaimCenter.verifyExposureLegalExpenseCoverageTest<br/>
+TestName = null<br/>
+Test Method resides in com.cgi.flex.testCases.ClaimCenter<br/>
+Test Status: Pass<br/>
+About to begin executing ClaimCenter.afterMethod<br/>
+</div>
+</td>
+<td></td>
+<td>286</td>
+<td>com.cgi.flex.testCases.ClaimCenter@665de723</td></tr>
+<tr>
+<td title='com.cgi.flex.testCases.ClaimCenter.verifyExposureLiabilityCoverageTest()'><b>verifyExposureLiabilityCoverageTest</b><br>Test class: com.cgi.flex.testCases.ClaimCenter<br/>
+<a href="#Output-920393858" onClick='toggleBox("Output-920393858", this, "Show output", "Hide output");'>Show output</a>
+
+<a href="#Output-920393858" onClick="toggleAllBoxes();">Show all outputs</a>
+<div class='log' id="Output-920393858">
+SignIn Action is successfully performed<br/>
+clickOnTabClaimArrow Action is successfully performed<br/>
+Completed executing ClaimCenter.verifyExposureLiabilityCoverageTest<br/>
+TestName = null<br/>
+Test Method resides in com.cgi.flex.testCases.ClaimCenter<br/>
+Test Status: Pass<br/>
+About to begin executing ClaimCenter.afterMethod<br/>
+</div>
+</td>
+<td></td>
+<td>217</td>
+<td>com.cgi.flex.testCases.ClaimCenter@665de723</td></tr>
+<tr>
+<td title='com.cgi.flex.testCases.ClaimCenter.verifyExposurePartsofFlatCoverageTest()'><b>verifyExposurePartsofFlatCoverageTest</b><br>Test class: com.cgi.flex.testCases.ClaimCenter<br/>
+<a href="#Output-93494285" onClick='toggleBox("Output-93494285", this, "Show output", "Hide output");'>Show output</a>
+
+<a href="#Output-93494285" onClick="toggleAllBoxes();">Show all outputs</a>
+<div class='log' id="Output-93494285">
+SignIn Action is successfully performed<br/>
+clickOnTabClaimArrow Action is successfully performed<br/>
+Completed executing ClaimCenter.verifyExposurePartsofFlatCoverageTest<br/>
+TestName = null<br/>
+Test Method resides in com.cgi.flex.testCases.ClaimCenter<br/>
+Test Status: Pass<br/>
+About to begin executing ClaimCenter.afterMethod<br/>
+</div>
+</td>
+<td></td>
+<td>511</td>
+<td>com.cgi.flex.testCases.ClaimCenter@665de723</td></tr>
+<tr>
+<td title='com.cgi.flex.testCases.ClaimCenter.verifyIncidentContentCoverageTest()'><b>verifyIncidentContentCoverageTest</b><br>Test class: com.cgi.flex.testCases.ClaimCenter<br/>
+<a href="#Output-1729671574" onClick='toggleBox("Output-1729671574", this, "Show output", "Hide output");'>Show output</a>
+
+<a href="#Output-1729671574" onClick="toggleAllBoxes();">Show all outputs</a>
+<div class='log' id="Output-1729671574">
+SignIn Action is successfully performed<br/>
+clickOnClaimArrowtab Action is performed successfully <br/>
+Completed executing ClaimCenter.verifyIncidentContentCoverageTest<br/>
+TestName = null<br/>
+Test Method resides in com.cgi.flex.testCases.ClaimCenter<br/>
+Test Status: Pass<br/>
+About to begin executing ClaimCenter.afterMethod<br/>
+</div>
+</td>
+<td></td>
+<td>191</td>
+<td>com.cgi.flex.testCases.ClaimCenter@665de723</td></tr>
+<tr>
+<td title='com.cgi.flex.testCases.ClaimCenter.verifyIncidentLegalExpenseCoverageTest()'><b>verifyIncidentLegalExpenseCoverageTest</b><br>Test class: com.cgi.flex.testCases.ClaimCenter<br/>
+<a href="#Output-777473592" onClick='toggleBox("Output-777473592", this, "Show output", "Hide output");'>Show output</a>
+
+<a href="#Output-777473592" onClick="toggleAllBoxes();">Show all outputs</a>
+<div class='log' id="Output-777473592">
+SignIn Action is successfully performed<br/>
+clickOnClaimArrowtab Action is performed successfully <br/>
+Completed executing ClaimCenter.verifyIncidentLegalExpenseCoverageTest<br/>
+TestName = null<br/>
+Test Method resides in com.cgi.flex.testCases.ClaimCenter<br/>
+Test Status: Pass<br/>
+About to begin executing ClaimCenter.afterMethod<br/>
+</div>
+</td>
+<td></td>
+<td>194</td>
+<td>com.cgi.flex.testCases.ClaimCenter@665de723</td></tr>
+<tr>
+<td title='com.cgi.flex.testCases.ClaimCenter.verifyIncidentLiabilityCoverageTest()'><b>verifyIncidentLiabilityCoverageTest</b><br>Test class: com.cgi.flex.testCases.ClaimCenter<br/>
+<a href="#Output-2036944497" onClick='toggleBox("Output-2036944497", this, "Show output", "Hide output");'>Show output</a>
+
+<a href="#Output-2036944497" onClick="toggleAllBoxes();">Show all outputs</a>
+<div class='log' id="Output-2036944497">
+SignIn Action is successfully performed<br/>
+clickOnClaimArrowtab Action is performed successfully <br/>
+Completed executing ClaimCenter.verifyIncidentLiabilityCoverageTest<br/>
+TestName = null<br/>
+Test Method resides in com.cgi.flex.testCases.ClaimCenter<br/>
+Test Status: Pass<br/>
+About to begin executing ClaimCenter.afterMethod<br/>
+</div>
+</td>
+<td></td>
+<td>194</td>
+<td>com.cgi.flex.testCases.ClaimCenter@665de723</td></tr>
+<tr>
+<td title='com.cgi.flex.testCases.ClaimCenter.verifyIncidentPartsOfFlatCoverageTest()'><b>verifyIncidentPartsOfFlatCoverageTest</b><br>Test class: com.cgi.flex.testCases.ClaimCenter<br/>
+<a href="#Output-355743072" onClick='toggleBox("Output-355743072", this, "Show output", "Hide output");'>Show output</a>
+
+<a href="#Output-355743072" onClick="toggleAllBoxes();">Show all outputs</a>
+<div class='log' id="Output-355743072">
+SignIn Action is successfully performed<br/>
+clickOnClaimArrowtab Action is performed successfully <br/>
+Completed executing ClaimCenter.verifyIncidentPartsOfFlatCoverageTest<br/>
+TestName = null<br/>
+Test Method resides in com.cgi.flex.testCases.ClaimCenter<br/>
+Test Status: Pass<br/>
+About to begin executing ClaimCenter.afterMethod<br/>
+</div>
+</td>
+<td></td>
+<td>194</td>
+<td>com.cgi.flex.testCases.ClaimCenter@665de723</td></tr>
+<tr>
+<td title='com.cgi.flex.testCases.ClaimCenter.verifyReservesInLegalExpensesTest()'><b>verifyReservesInLegalExpensesTest</b><br>Test class: com.cgi.flex.testCases.ClaimCenter<br/>
+<a href="#Output-1257439514" onClick='toggleBox("Output-1257439514", this, "Show output", "Hide output");'>Show output</a>
+
+<a href="#Output-1257439514" onClick="toggleAllBoxes();">Show all outputs</a>
+<div class='log' id="Output-1257439514">
+SignIn Action is successfully performed<br/>
+clickOnTabClaimArrow Action is successfully performed<br/>
+Completed executing ClaimCenter.verifyReservesInLegalExpensesTest<br/>
+TestName = null<br/>
+Test Method resides in com.cgi.flex.testCases.ClaimCenter<br/>
+Test Status: Pass<br/>
+About to begin executing ClaimCenter.afterMethod<br/>
+</div>
+</td>
+<td></td>
+<td>202</td>
+<td>com.cgi.flex.testCases.ClaimCenter@665de723</td></tr>
+<tr>
+<td title='com.cgi.flex.testCases.ClaimCenter.verifyReservesInPartsOfFlatTest()'><b>verifyReservesInPartsOfFlatTest</b><br>Test class: com.cgi.flex.testCases.ClaimCenter<br/>
+<a href="#Output-906792644" onClick='toggleBox("Output-906792644", this, "Show output", "Hide output");'>Show output</a>
+
+<a href="#Output-906792644" onClick="toggleAllBoxes();">Show all outputs</a>
+<div class='log' id="Output-906792644">
+SignIn Action is successfully performed<br/>
+clickOnTabClaimArrow Action is successfully performed<br/>
+Completed executing ClaimCenter.verifyReservesInPartsOfFlatTest<br/>
+TestName = null<br/>
+Test Method resides in com.cgi.flex.testCases.ClaimCenter<br/>
+Test Status: Pass<br/>
+About to begin executing ClaimCenter.afterMethod<br/>
+</div>
+</td>
+<td></td>
+<td>202</td>
+<td>com.cgi.flex.testCases.ClaimCenter@665de723</td></tr>
+</table><p>
+</body>
+</html>

@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="Failed suite [FlexSuite]">
+  <listeners>
+    <listener class-name="com.flex.utility.Listener"/>
+  </listeners>
+  <test name="RegressionSuitePC(failed)">
+    <classes>
+      <class name="com.flex.testCases.ClaimCenter">
+        <methods>
+          <include name="afterMethod"/>
+          <include name="VerifyFaceBookSignup1"/>
+          <include name="beforeSuite"/>
+          <include name="beforeClass"/>
+        </methods>
+      </class> <!-- com.flex.testCases.ClaimCenter -->
+    </classes>
+  </test> <!-- RegressionSuitePC(failed) -->
+</suite> <!-- Failed suite [FlexSuite] -->
