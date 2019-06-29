@@ -25,7 +25,7 @@ import com.flex.actions.ApplicationSpecificActions;
 import com.flex.actions.GenericActions;
 import com.flex.actions.LoginActions;
 import com.flex.pages.BaseClass;
-import com.flex.pages.Facebook;
+import com.flex.pages.Redbus;
 import com.flex.utility.*;
 import com.google.common.base.Strings;
 
@@ -43,7 +43,7 @@ public class SampleTest extends BasePage {
 		try {
 			this.report = getReport();
 			testName = "SystemTest";
-			parentNode = report.startTest(testName, "ClaimCenter");
+			parentNode = report.startTest(testName, "Selenium Demo");
 
 		} catch (Exception e) {
 			Log.error("Class ClaimCenter | Method beforeClass | Exception desc : " + e.getMessage());
@@ -63,16 +63,16 @@ public class SampleTest extends BasePage {
 			ExcelUtils.setExcelFile(Constant.Path_TestData + Constant.File_TestData,
 					Constant.SpreadSheetName);
 			testCaseRow = ExcelUtils.getRowContains(testCaseName, Constant.Col_TestCaseName);
-			System.out.println(Constant.Col_Firstname);
+			System.out.println("Row count is " +ExcelUtils.getRowUsed());
+			System.out.println("Col count is " +ExcelUtils.getColumnCount());
 			driver = Utils.OpenBrowser(testCaseRow, Constant.APP_URL);
 			//Thread.sleep(3000);
 			logger = report.startTest(testCaseName);
 			new BaseClass(driver, logger);
 
 		} catch (Exception e) {
-			Log.error("Class ClaimCenter | Method beforeMethod | Exception desc : " + e.getMessage());
-			logger.log(LogStatus.FAIL,
-					"Class ClaimCenter | Method beforeMethod | Exception desc : Unexpected Error Occured");
+			//Log.error("Method beforeMethod | Exception desc : " + e.getMessage());
+			//logger.log(LogStatus.FAIL,"Method beforeMethod | Exception desc : Unexpected Error Occured");
 		}
 
 	}
@@ -85,15 +85,23 @@ public class SampleTest extends BasePage {
 	@Test(priority = 1)
 	public void VerifyFaceBookSignup() throws Exception {
 		try {
-			Thread.sleep(4000);
-			String testData = ExcelUtils.getCellData(testCaseRow, Constant.Col_Lastname);
-			System.out.println(testData);
-
 			
-			GenericActions.EnterText(testCaseRow, Constant.Col_Firstname, Facebook.Firstname());
-			GenericActions.EnterText(testCaseRow, Constant.Col_Lastname, Facebook.Lastname());
+			GenericActions.EnterText(testCaseRow, Constant.Col_Source, Redbus.Firstname());
+			Utils.Wait(2);
+			GenericActions.EnterText(testCaseRow, Constant.Col_Destination, Redbus.Lastname());
+			Utils.Wait(2);
+			GenericActions.SelectDate(Redbus.StartDate(), Redbus.Onward());
+			Utils.Wait(2);
+			GenericActions.SelectDate(Redbus.ReturnDate(), Redbus.Return());
+			Utils.Wait(2);
+			GenericActions.clickActionOnBtn(Redbus.Search_Button());
+			Utils.Wait(2);
+			GenericActions.ElementExist(Redbus.Modify_Button());
 			
-			//GenericActions.EnterText(testCaseRow, Constant.Col_Email, Facebook.Email());
+			//GenericActions.SelectDate1(testCaseRow, Constant.Col_StartDate, Redbus.Onward());
+			//Thread.sleep(2000);
+			//GenericActions.SelectDate1(testCaseRow, Constant.Col_ReturnDate, Redbus.Onward());
+			
 			
 			//GenericActions.EnterText(testCaseRow, Constant.Col_Password, Facebook.Password());
 			//Thread.sleep(4000);
@@ -121,14 +129,14 @@ public class SampleTest extends BasePage {
 			Log.endTestCase(testCaseName);
 			parentNode.appendChild(logger);
 			report.endTest(logger);
-			// driver.close();
-			driver.quit();
+			 driver.close();
+			//driver.quit();
 
 		} catch (Exception e) {
 			Log.error("Class ClaimCenter | Method afterMethod | Exception desc : " + e.getMessage());
 
 		} finally {
-			driver.quit();
+			//driver.quit();
 			// driver.close();
 			Log.error("Class ClaimCenter | Method afterMethod | Exception desc : Unexpected Error Occured");
 		}

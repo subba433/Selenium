@@ -1,13 +1,6 @@
 package com.flex.utility;
 
-import java.io.File;
-
 public class Constant {
-	
-	
-		public static final String baseUrlCC = "http://158.234.144.108:8280/cc/ClaimCenter.do";
-		public static final String baseUrlPC = "http://158.234.144.107:8280/pc/PolicyCenter.do";
-		public static final String baseUrlBC = "http://158.234.144.108:8380/bc/BillingCenter.do";
 	
 	
 		public static final String getHomeDirectory = System.getProperty("user.dir");
@@ -43,12 +36,12 @@ public class Constant {
 		public static final String Path_ScreenShot =  getHomeDirectory+"\\src\\test\\java\\com\\flex\\screenshots\\";
 		
 		public static final int Col_TestCaseName = 0;	
-		public static final int Col_Firstname = 1;
-		public static final int Col_Lastname = 2;
+		public static final int Col_Source = 1;
+		public static final int Col_Destination = 2;
 		public static final int Col_Browser = 3;
-		public static final int Col_Email = 4;
-		public static final int Col_Password = 5;
-		public static final int Col_Year = 8;
+		public static final int Col_StartDate = 4;
+		public static final int Col_ReturnDate = 5;
+		public static final int Col_Password = 8;
 		
 		public static final int Col_UserName = 7;
 		

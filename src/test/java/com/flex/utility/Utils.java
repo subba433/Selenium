@@ -107,6 +107,13 @@ public class Utils {
 			}
 		}
 	 
+       public static void Wait(int  timeout) throws InterruptedException{
+		 int time=timeout *1;
+		  for (int i=0; i<time; i++)	{
+			Thread.sleep(1000);
+		}
+			
+	 	}
 	 
 	 public static String getScreenshotPath(String testModuleName, String testCaseName,int stepNo) {
 			String timeStamp = new SimpleDateFormat("yyyy.MM.dd.HH.mm.ss")
@@ -173,8 +180,9 @@ public class Utils {
 	 }
 	 public static ExtentReports generateReports(){
 		try{
-			report = new ExtentReports(Constant.getHomeDirectory +"\\TestResultReport"+"\\report"+"_"+"IE"+getNormalisedstring()+".html", true);
+			report = new ExtentReports(Constant.getHomeDirectory +"\\TestResultReport"+"\\Results_"+getNormalisedstring()+".html", true);
 			 report.assignProject("Flex-Automation");
+			 report.loadConfig(new File(System.getProperty("user.dir")+"/extent-config.xml"));
 			
 		}catch(Exception e){
 			Log.error("Class Utils | Method generateReports | Exception desc : "+e.getMessage());

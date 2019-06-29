@@ -137,7 +137,7 @@ public class GenericActions extends BaseClass {
 			elementText = element.getText();
 			element.click();
 			Log.info(elementText + " is clicked successfully");
-			
+			logger.log(LogStatus.PASS, "Clicked on "+ elementText + " Successfully");
 
 		} catch (Exception e) {
 			Log.info("Exception Occured while clicking" + elementText + " and the Exception is" + e.getMessage());
@@ -571,14 +571,80 @@ public static void enterValueInDisabledField(int testCaseRow, int Col_Num, WebEl
 public static void EnterText(int testcaserow, int col, WebElement element) throws Exception{
 	
 	String testdata=ExcelUtils.getCellData(testcaserow, col);
-	System.out.println(testdata);
+	
+	try {
+	//System.out.println(testdata);
 	element.click();
-	Thread.sleep(4000);
+	Thread.sleep(2000);
 	element.sendKeys(testdata);
+	Thread.sleep(2000);
+	element.click();
+	logger.log(LogStatus.PASS, testdata + "is entered successfully");
+	Log.info(testdata + "is entered successfully");
+
+	} catch (Exception e) {
+
+	Log.info("Exception Occured" + e.getMessage() + "While entering data in" + element);
+	logger.log(LogStatus.FAIL,  "Test Data is not entered successfully");
+}
+
 	
 }
 
+  public static void SelectDate(String date, String element) throws Exception{
+	    //String date=ExcelUtils.getCellData(testcaserow, col);
+	    System.out.println(element);
+	    System.out.println(date);
+	    try {
+	    JavascriptExecutor js= (JavascriptExecutor) driver;
+		//js.executeScript(str1);
+		js.executeScript("document.querySelector("+element+").value="+date+"");
+		Thread.sleep(2000);
+		//js.executeScript("document.querySelector('#return_cal').value='31-Jul-2018'");	
+		logger.log(LogStatus.PASS, date + "is entered successfully");
+		Log.info(date + "is entered successfully");
 
+	    } catch (Exception e) {
+
+	    	Log.info("Exception Occured" + e.getMessage() + "While entering data in" + element);
+	    	logger.log(LogStatus.FAIL,  "Test Data is not entered successfully");
+         }
+
+  }
+  
+  public static void SelectDate1(int testcaserow, int col, String locator) throws Exception{
+	    String date=ExcelUtils.getCellData(testcaserow, col);
+	    System.out.println(locator);
+	    System.out.println(date);
+	    try {
+	    JavascriptExecutor js= (JavascriptExecutor) driver;
+		//js.executeScript(str1);
+		js.executeScript("document.querySelector("+locator+").value="+date+"");
+		Thread.sleep(2000);
+		//js.executeScript("document.querySelector('#return_cal').value='31-Jul-2018'");	
+		logger.log(LogStatus.PASS, date + "is entered successfully");
+		Log.info(date + "is entered successfully");
+
+	    } catch (Exception e) {
+
+	    	Log.info("Exception Occured" + e.getMessage() + "While entering data in" + locator);
+	    	logger.log(LogStatus.FAIL,  "Test Data is not entered successfully");
+       }
+
+     }
+  
+  public static void ElementExist(WebElement element) throws Exception {
+	  boolean elementexist=false;
+		try {
+			elementexist=element.isDisplayed();
+			logger.log(LogStatus.PASS,element.getText()+":is available");
+		} catch (Exception e) {
+			System.out.println("click action " + element + e.getMessage());
+			Log.info("Exception Occured" + e.getMessage());
+			logger.log(LogStatus.FAIL, element.getText() + "is not available");
+		}
+
+	}
 
 }
 

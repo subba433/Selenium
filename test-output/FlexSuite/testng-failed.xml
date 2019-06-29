@@ -4,16 +4,19 @@
   <listeners>
     <listener class-name="com.flex.utility.Listener"/>
   </listeners>
-  <test name="RegressionSuitePC(failed)">
+  <test name="RegressionSuite(failed)">
     <classes>
-      <class name="com.flex.testCases.ClaimCenter">
+      <class name="com.flex.testCases.SampleTest">
         <methods>
-          <include name="afterMethod"/>
-          <include name="VerifyFaceBookSignup1"/>
+          <include name="afterClass"/>
+          <include name="afterSuite"/>
           <include name="beforeSuite"/>
+          <include name="afterMethod"/>
           <include name="beforeClass"/>
+          <include name="beforeMethod"/>
+          <include name="VerifyFaceBookSignup"/>
         </methods>
-      </class> <!-- com.flex.testCases.ClaimCenter -->
+      </class> <!-- com.flex.testCases.SampleTest -->
     </classes>
-  </test> <!-- RegressionSuitePC(failed) -->
+  </test> <!-- RegressionSuite(failed) -->
 </suite> <!-- Failed suite [FlexSuite] -->

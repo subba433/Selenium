@@ -96,6 +96,19 @@ public static int getRowUsed() throws Exception {
 
 }
 
+public static int getColumnCount() throws Exception {
+	try{
+		int ColCount = ExcelWSheet.getRow(0).getLastCellNum();
+		Log.info("Total number of Row used return as < " + ColCount + " >.");		
+		return ColCount;
+	}catch (Exception e){
+		Log.error("Class ExcelUtil | Method getRowUsed | Exception desc : "+e.getMessage());
+		System.out.println(e.getMessage());
+		throw (e);
+	}
+
+}
+
 public static int getRowContainsDP(String testCaseName, int colNum) throws Exception{
 	
 	try {
